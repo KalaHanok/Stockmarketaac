@@ -1,0 +1,24 @@
+.Marque-container{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    justify-content: space-between;
+    background-color: #8F9A9C;
+}
+.Marque-icon1{
+    color: white;
+    margin-left: 2vw;
+    font-size: 25px;
+}
+.Marque-icon2{
+    color: white;
+    margin-right:2vw;
+    font-size: 25px;
+}
+.Marque-info{
+    width: 96vw;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
