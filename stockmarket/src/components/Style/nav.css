@@ -21,6 +21,7 @@
 }
 .Nav-child3{
     display: flex;
+    padding: 5px;
 }
 .Nav-input{
     display: flex;
@@ -53,6 +54,9 @@
     .Nav-input{
         width: 70vw;
     }
+    .nav-search-data{
+        width: 70vw;
+    }
     .Nav-child1{
         display: none;
     }
@@ -65,4 +69,31 @@
     .Nav-container{
         justify-content: space-around;
     }
+}
+.Nav-search-container{
+    display: flex;
+    flex-direction:column;
+    width: 40vw;
+    height: auto;
+
+}
+.nav-search-data{
+    display: flex;
+    flex-direction: column;
+    width: 39.5vw;
+    height: auto;
+    align-items: center;
+    background-color: #a2e8f4;
+    position: absolute;
+    top:55px;
+    border-radius: 15px;
+    margin-left: 7px;
+}
+.search-p{
+    color: black;
+    text-align: center;
+    display: flex;
+}
+.nav-search-none{
+    display: none;
 }

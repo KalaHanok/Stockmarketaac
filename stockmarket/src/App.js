@@ -6,7 +6,6 @@ import Toploserngainers from './components/Toploserngainers';
 function App() {
   return (
     <div className='app'>
-      <Marque/>
       <Nav/>
       <Anonomous/>
       <Toploserngainers/>

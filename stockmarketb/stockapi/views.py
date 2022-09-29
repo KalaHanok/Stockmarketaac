@@ -1,3 +1,8 @@
+import json
+from multiprocessing.resource_sharer import stop
+from operator import index
+from posixpath import split
+import pandas as pd
 from django.http import HttpResponse
 from django.shortcuts import render
 import pandas as pd
@@ -12,14 +17,16 @@ from django.views.decorators.csrf import csrf_exempt
 from .serializers import SymbolSerializer
 # Create your views here.
 def Stock(request):
-    values=StockSymbol.objects.get(pk=1)
+    data_dic={'data':[]}
+    values=StockSymbol.objects.all()
     api_key='VXBJH8A0SFUYCWMR'
     ts=TimeSeries(key=api_key,output_format='pandas')
     data,meta_data=ts.get_intraday(symbol='MSFT',interval='1min',outputsize='full')
     close_data=data['4. close']
     percentage_change=close_data.pct_change()
     last_change=percentage_change[-1]
-    print(last_change)
+    #print(last_change)
+    print(data)
     return HttpResponse(data)
 @csrf_exempt
 def Symbols(request):
@@ -32,3 +39,53 @@ def Symbols(request):
             print(serializer.is_valid())
             if serializer.is_valid():
                 serializer.save()
+            
+def test(request,rag):
+    data_dic={'data':[]}
+    anurag='D1POQPCSKKGG4TQ8'
+    hanok='VXBJH8A0SFUYCWMR'
+    sri='XYI25WD28RBUU573'
+    akash='7I53ZP4DF8JGFJAE' 
+    api_key=''
+    rage=rag//10
+    rag=str(rag)
+    if int(rag[-1])==1:
+        api_key=anurag
+    elif int(rag[-1])==2:
+        api_key=hanok
+    elif int(rag[-1])==3:
+        api_key=sri
+    elif int(rag[-1])==4:
+        api_key=akash
+    ts=TimeSeries(key=api_key,output_format='pandas')
+    datas=StockSymbol.objects.all()
+    for i in range(rage,rage+6):
+        ticker=datas[i].symbol
+        print(ticker)
+        try:
+            data,meta_data=ts.get_intraday(symbol=ticker,interval='1min',outputsize='full')
+            close_data=data['4. close']
+            percentage_change=close_data.pct_change()
+            last_change=percentage_change[-1]
+            print(last_change)
+            data_dic['data'].append({'name':datas[i].shortName,'change':round(last_change,4)})
+        except ValueError:
+            pass
+    j_data=json.dumps(data_dic)
+    print(j_data)
+
+    return HttpResponse(j_data)
+@csrf_exempt
+def Search(request):
+    symbols=StockSymbol.objects.all().values()
+    df=pd.DataFrame(symbols)
+    if request.method=="POST":
+        json_data=request.body
+        stream=io.BytesIO(json_data)
+        python_data=JSONParser().parse(stream)
+        python_data=python_data['search'].lower()
+        df=df.loc[(df.shortName.str.lower()).str.slice(stop=len(python_data)).eq(python_data)|(df.longName.str.lower()).str.slice(stop=len(python_data)).eq(python_data)| (df.symbol.str.lower()).str.slice(stop=len(python_data)).eq(python_data)].head()
+        print(df) 
+        sestr_data=df.to_json(orient='index')
+        print(sestr_data)
+        return HttpResponse(sestr_data)

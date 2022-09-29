@@ -19,5 +19,7 @@ from stockapi import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('stock/',views.Stock,name="stock"),
-    path('ticker/',views.Symbols,name='symbol')
+    path('ticker/',views.Symbols,name='symbol'),
+    path('test/<int:rag>/',views.test,name='test'),
+    path('search/',views.Search,name="search")
 ]

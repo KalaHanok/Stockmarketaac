@@ -11,7 +11,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    animation: flow 10s forwards infinite ease-in-out;
+    animation: flow 20s forwards infinite ease-in-out;
 }
 .marquee-li-info{
     display: flex;
