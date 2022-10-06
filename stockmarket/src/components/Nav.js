@@ -4,18 +4,29 @@ import { ImSearch } from "react-icons/im";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { IoIosNotifications } from "react-icons/io";
 import { FaBars} from "react-icons/fa";
+import {useNavigate} from 'react-router-dom'
 import './Style/nav.css'
 import axios from 'axios';
 function Nav() {
     const [data,setdata]=useState([])
+    const [icons_c_name,set_i_c_names]=useState('icons-none')
     const [c_name ,set_c_name]=useState("nav-search-data")
+    const navigate=useNavigate()
     return (
         <div className='Nav-container' onClick={()=>{
+            set_c_name("nav-search-none")
         }}>
             <div className='Nav-bar'>
                 <FaBars/>
             </div>
-            <div className='Nav-child1'>
+            <div className='Nav-child1' onClick={()=>{set_i_c_names(
+                (prevState)=>{
+                    if(prevState==='icons-none'){
+                        return 'icons-display'
+                    }
+                    return 'icons-none'
+                }
+            )}}>
                 <div className='Nav-info'>
                     stock-ex
                 </div>
@@ -43,7 +54,8 @@ function Nav() {
                                 Object.keys(res.data).forEach(key=>{
                                     let new_setdata={
                                             symbol:res.data[key]['symbol'],
-                                            shortName:res.data[key]['shortName']
+                                            shortName:res.data[key]['shortName'],
+                                            id:res.data[key]['id']
                                     }
                                     setdata(prevState => {
                                         return(
@@ -59,7 +71,14 @@ function Nav() {
                     <div className={c_name}>
                         {
                             data.map(val=>
-                                    <p className='search-p'> {val.shortName}( {val.symbol} )</p>
+                                    <p className='search-p' onClick={
+                                        ()=>{
+                                            navigate(`${val.id}`)
+                                            set_c_name("nav-search-none")
+                                        }
+                                        }>
+                                         {val.shortName}( {val.symbol} )
+                                    </p>
                                 )
                         }
                     </div>
@@ -71,6 +90,9 @@ function Nav() {
                 <div className='Nav-notifyicon'>
                     <IoIosNotifications />
                 </div>
+            </div>
+            <div className={icons_c_name}>
+
             </div>
         </div>
     )

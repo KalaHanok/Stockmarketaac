@@ -9,10 +9,11 @@ function Searchdata(props) {
       {
         search_data.forEach(element => {
           Object.values(element).forEach(val=>{
-            return (<>
-              { console.log(val['shortName'],"",val['symbol'])}
+            return (
+            <>
               <span>{val['shortName']}  </span> <span>(</span> <span> {val['symbol']}</span><span>)</span>
-            </>)
+            </>
+            )
           })
         })
       }

@@ -39,7 +39,7 @@ def Symbols(request):
             print(serializer.is_valid())
             if serializer.is_valid():
                 serializer.save()
-            
+                
 def test(request,rag):
     data_dic={'data':[]}
     anurag='D1POQPCSKKGG4TQ8'
@@ -89,3 +89,9 @@ def Search(request):
         sestr_data=df.to_json(orient='index')
         print(sestr_data)
         return HttpResponse(sestr_data)
+def Basic_details(request,id):
+    if request.method=="GET":
+        print(id)
+        stock_deatails=StockSymbol.objects.get(pk=id)
+        print(stock_deatails.longName)
+        return HttpResponse(json.dumps({"id":stock_deatails.id,"symbol":stock_deatails.symbol,"shortName":stock_deatails.shortName,"longName":stock_deatails.longName,"exchange":stock_deatails.exchange,"market":stock_deatails.market,"quoteType":stock_deatails.quoteType}))
