@@ -73,7 +73,7 @@ function Nav() {
                             data.map(val=>
                                     <p className='search-p' onClick={
                                         ()=>{
-                                            navigate(`${val.id}`)
+                                            navigate(`${val.id}/0`)
                                             set_c_name("nav-search-none")
                                         }
                                         }>
@@ -93,6 +93,31 @@ function Nav() {
             </div>
             <div className={icons_c_name}>
 
+                <div className='nav-icons-c'>
+                    <div 
+                        onClick={
+                            ()=>{
+                                navigate('/')
+                                set_i_c_names('icons-none')
+                            }
+                        }
+                    >
+                         <span className='nav-b-h'><AiFillCaretDown /></span>
+                         back to home
+                    </div>
+                </div>
+                <div className='nav-icons-c-1'>
+                    <div  className='nav-icon-m'> </div>
+                </div>
+                <div className='nav-icons-c-2'>
+                    <div  className='nav-icon-m'></div>
+                    <div  className='nav-icon-m'></div>
+                    <div  className='nav-icon-m'></div>
+                </div>
+                <div className='nav-icons-c-3'>
+                    <div  className='nav-icon-m'></div>
+                    <div  className='nav-icon-m' id='nav-icons-c-3'></div>
+                </div>
             </div>
         </div>
     )

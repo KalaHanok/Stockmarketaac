@@ -82,16 +82,56 @@
     display: none;
 }
 .icons-display{
-    width: 15vw;
-    height: 35vh;
-    background-color:  #D9D9D9;
+    width: 300px;
+    height: 400px;
+    background-color:  #8F9A9C;
     position: absolute;
     top: 6.5vh;
     left: 1.25vw;
     z-index: 1;
     border-radius: 0.5vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
 }
-
+.nav-icons-c-1{
+    display: flex;
+    width: 235px;
+    height:100px ;
+    justify-content:flex-start;
+    position: relative;
+    left: 2vh;
+}
+.nav-icons-c-2{
+    display: flex;
+    width: 235px;
+    height: 100px;
+    justify-content:space-around;
+}
+.nav-icons-c-3{
+    display: flex;
+    width: 235px;
+    height: 100px;
+    justify-content:flex-start;
+    position: relative;
+    left: 2vh;
+}
+.nav-icon-m{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: #D9D9D9;
+    border-radius: 0.5vh;
+}
+#nav-icons-c-3{
+    position: relative;
+    left: 4vh;
+}
+.nav-b-h{
+    position: relative;
+    top:0.3vh;
+    transform: rotate(20deg);
+}
 @media only screen and (max-width: 720px){
     .Nav-input{
         width: 70vw;

@@ -9,6 +9,7 @@ ChartJS.register(
 )
 function Info_stock() {
   const params = useParams()
+  console.log(params.id,params.days)
   const [data_stock, setdata_stock] = useState({ id: null, symbol: '', shortName: '', longName: '', exchange: '', market: '', quoteType: '' })
   const [api_data, set_apidata] = useState({ x_values: [], y_values: [] })
   useEffect(() => {
@@ -61,11 +62,13 @@ function Info_stock() {
             {data_stock.longName}
           </div>
           <div className='info-request-days'>
-            <div className='info-days'>1D</div>
-            <div className='info-days'>1W</div>
-            <div className='info-days'>1M</div>
-            <div className='info-days'>1Y</div>
-            <div className='info-days'>5Y</div>
+            <div className='info-days' onInvalid={()=>{
+
+            }}>1D</div>
+            <div className='info-days' >1W</div>
+            <div className='info-days' >1M</div>
+            <div className='info-days' >1Y</div>
+            <div className='info-days' >5Y</div>
           </div>
         </div>
         <div className='info-chart-details'>
