@@ -4,19 +4,49 @@ import axios from 'axios'
 import {Chart as ChartJS,Title,Tooltip,LineElement,Legend,CategoryScale,LinearScale,PointElement} from 'chart.js'
 import { Line } from 'react-chartjs-2';
 import './Style/info_stock.css'
+import {useNavigate} from 'react-router-dom'
 ChartJS.register(
     Title,Tooltip,LineElement,Legend,CategoryScale,LinearScale,PointElement
 )
 function Info_stock() {
   const params = useParams()
+  const navigate=useNavigate()
   console.log(params.id,params.days)
   const [data_stock, setdata_stock] = useState({ id: null, symbol: '', shortName: '', longName: '', exchange: '', market: '', quoteType: '' })
   const [api_data, set_apidata] = useState({ x_values: [], y_values: [] })
+  const getId=(dy)=>{
+    if(dy==0)
+      return ['current-search','none','none']
+    else if(dy==1)
+      return ['none','current-search','none']
+    else if(dy==2)
+      return ['none','none','current-search']
+  }
+  const [id1,id2,id3]=getId(params.days)
+  const urltoapply=(dy,sym)=>{
+    if(dy==0){
+      let url=`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${sym}&interval=5min&apikey=VXBJH8A0SFUYCWMR`
+      let k='Time Series (5min)'
+      return [k,url]
+    }
+    else if(dy==1){
+      let url=`https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=${sym}&apikey=VXBJH8A0SFUYCWMR`
+      let k='Weekly Time Series'
+      return [k,url]
+    }
+    else if(dy==2){
+      let url=`https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=${sym}&apikey=VXBJH8A0SFUYCWMR`
+      let k='Monthly Time Series'
+      return [k,url]
+    }
+  }
   useEffect(() => {
     axios.get(`http://127.0.0.1:8000/stockdetails/${params.id}/`).then(
       (res) => {
-        axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${res.data.symbol}&interval=5min&apikey=VXBJH8A0SFUYCWMR`).then(
+        const [k,url]=urltoapply(params.days,res.data.symbol)
+        axios.get(url).then(
           res1 => {
+            console.log(res1.data)
             set_apidata((prevstate) => {
               return (
                 {
@@ -25,8 +55,8 @@ function Info_stock() {
                 }
               )
             })
-            let data_index = res1.data['Time Series (5min)']
-            console.log( res1.data['Time Series (5min)'])
+            let data_index = res1.data[k]
+            console.log( res1.data[k])
             Object.keys(data_index).forEach(key1 => {
               set_apidata((prevstate) => {
                 return (
@@ -53,7 +83,7 @@ function Info_stock() {
         })
       }
     )
-  }, [params.id])
+  }, [params.id,params.days])
   return (
     <div className='info-main-container'>
       <div className='info-meta-main-container'>
@@ -62,13 +92,11 @@ function Info_stock() {
             {data_stock.longName}
           </div>
           <div className='info-request-days'>
-            <div className='info-days' onInvalid={()=>{
-
-            }}>1D</div>
-            <div className='info-days' >1W</div>
-            <div className='info-days' >1M</div>
-            <div className='info-days' >1Y</div>
-            <div className='info-days' >5Y</div>
+            <div className='info-days' onClick={()=>navigate(`/${params.id}/0`)} id={id1}>1D</div>
+            <div className='info-days' onClick={()=>navigate(`/${params.id}/1`)} id={id2}>1W</div>
+            <div className='info-days' onClick={()=>navigate(`/${params.id}/2`)} id={id3}>1M</div>
+            <div className='info-days'>1Y</div>
+            <div className='info-days'>5Y</div>
           </div>
         </div>
         <div className='info-chart-details'>
