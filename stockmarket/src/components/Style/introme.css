@@ -1,0 +1,37 @@
+.heading{
+    color:white;
+    background-color: black;
+    padding-left: 50px;
+    margin-top: 0px;
+    font: bold;
+    font-size: larger;
+
+}
+.Elementry-childs{
+    background-color:black;
+    margin: 0;
+    padding: 0;
+}
+.subh{
+    color: #FBD757;
+    padding-left: 50px;
+    font-size: larger;
+
+}
+.Intrest-p-s{
+    color: rgb(221, 84, 84) ;
+}
+.cont{
+    color: aliceblue;
+  padding-left: 50px;
+  padding-right: 100px;
+  font-size: larger;
+  text-align: justify;
+}
+.images{
+    padding-left: 100px;
+}
+.images1{
+    padding-left: 0px;
+    width: 500px;
+}

@@ -125,6 +125,9 @@
     background-color: #D9D9D9;
     border-radius: 0.5vh;
 }
+.nav-icons-c{
+    color: black;
+}
 #nav-icons-c-3{
     position: relative;
     left: 4vh;

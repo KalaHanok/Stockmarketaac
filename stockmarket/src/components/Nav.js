@@ -110,9 +110,24 @@ function Nav() {
                     <div  className='nav-icon-m'> </div>
                 </div>
                 <div className='nav-icons-c-2'>
-                    <div  className='nav-icon-m'></div>
-                    <div  className='nav-icon-m'></div>
-                    <div  className='nav-icon-m'></div>
+                    <div  className='nav-icon-m'
+                     onClick={()=>{
+                            navigate('/ElementryEconomics')
+                            set_i_c_names('icons-none')
+                        }
+                    }></div>
+                    <div  className='nav-icon-m'
+                     onClick={()=>{
+                            navigate('/Equitymarkets')
+                            set_i_c_names('icons-none')
+                        }
+                    }></div>
+                    <div  className='nav-icon-m'
+                     onClick={()=>{
+                            navigate('/InvestmentInPortfolios')
+                            set_i_c_names('icons-none')
+                        }
+                    }></div>
                 </div>
                 <div className='nav-icons-c-3'>
                     <div  className='nav-icon-m'></div>
