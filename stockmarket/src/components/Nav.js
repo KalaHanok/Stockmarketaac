@@ -4,6 +4,10 @@ import { ImSearch } from "react-icons/im";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { IoIosNotifications } from "react-icons/io";
 import { FaBars} from "react-icons/fa";
+import decreasingStockSGraphIcon from './images/decreasing.png';
+import IncreasingStockSGraphIcon from './images/increasing-stocks-graphic.png';
+import MoneyGraphIcon from './images/money-graph-with-up-arrow.png';
+import { GiBookmarklet } from "react-icons/gi";
 import {useNavigate} from 'react-router-dom'
 import './Style/nav.css'
 import axios from 'axios';
@@ -16,7 +20,14 @@ function Nav() {
         <div className='Nav-container' onClick={()=>{
             set_c_name("nav-search-none")
         }}>
-            <div className='Nav-bar'>
+            <div className='Nav-bar' onClick={()=>{set_i_c_names(
+                (prevState)=>{
+                    if(prevState==='icons-none'){
+                        return 'icons-display'
+                    }
+                    return 'icons-none'
+                }
+            )}}>
                 <FaBars/>
             </div>
             <div className='Nav-child1' onClick={()=>{set_i_c_names(
@@ -115,19 +126,19 @@ function Nav() {
                             navigate('/ElementryEconomics')
                             set_i_c_names('icons-none')
                         }
-                    }></div>
+                    }><img src={decreasingStockSGraphIcon}/></div>
                     <div  className='nav-icon-m'
                      onClick={()=>{
                             navigate('/Equitymarkets')
                             set_i_c_names('icons-none')
                         }
-                    }></div>
+                    }><img src={IncreasingStockSGraphIcon}/></div>
                     <div  className='nav-icon-m'
                      onClick={()=>{
                             navigate('/InvestmentInPortfolios')
                             set_i_c_names('icons-none')
                         }
-                    }></div>
+                    }><img src={MoneyGraphIcon}/></div>
                 </div>
                 <div className='nav-icons-c-3'>
                     <div  className='nav-icon-m'></div>
