@@ -1,19 +1,26 @@
+/* *{
+    background-color: black;
+    
+} */
 .heading{
     color:white;
     background-color: black;
     font: bold;
     font-size: larger;
-
+    max-width: 100%;
+    padding-left: 0.6%;
 }
 .Elementry-childs{
     background-color:black;
     margin: 0;
     padding: 0;
+    max-width: 100%;
 }
 .subh{
     color: #FBD757;
-    padding-left: 50px;
+    padding-left: 0.5%;
     font-size: larger;
+    max-width: 80%;
 
 }
 .Intrest-p-s{
@@ -28,4 +35,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    border: 2px solid red;
+}
+.images-cf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 600px){
 }

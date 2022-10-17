@@ -14,28 +14,28 @@ function Toploserngainers() {
         </div>
         <div className='tplng-info-container'>
             <div className='tplng-info'>
-                <p>hlo</p>
+                <p className='toplng_stocks'>hlo</p>
                 <hr className='tplng-horizontal-line'></hr>
-                <p>hlo</p>
+                <p className='toplng_stocks'>hlo</p>
                 <hr className='tplng-horizontal-line'></hr>
-                <p>hlo</p>
+                <p className='toplng_stocks'>hlo</p>
                 <hr className='tplng-horizontal-line'></hr>
-                <p>hlo</p>
+                <p className='toplng_stocks'>hlo</p>
                 <hr className='tplng-horizontal-line'></hr>
-                <p>hlo</p>
+                <p className='toplng_stocks'>hlo</p>
                 <hr className='tplng-horizontal-line'></hr>
             </div>
             <hr className='tplng-vetical-line'></hr>
             <div className='tplng-info'>
-                <p>hlo</p>
+                <p className='toplng_stocks'>hlo</p>
                 <hr className='tplng-horizontal-line'></hr>
-                <p>hlo</p>
+                <p className='toplng_stocks'>hlo</p>
                 <hr className='tplng-horizontal-line'></hr>
-                <p>hlo</p>
+                <p className='toplng_stocks'>hlo</p>
                 <hr className='tplng-horizontal-line'></hr>
-                <p>hlo</p>
+                <p className='toplng_stocks'>hlo</p>
                 <hr className='tplng-horizontal-line'></hr>
-                <p>hlo</p>
+                <p className='toplng_stocks'>hlo</p>
                 <hr className='tplng-horizontal-line'></hr>
             </div>
         </div>

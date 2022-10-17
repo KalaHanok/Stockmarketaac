@@ -4,13 +4,13 @@ function IntroMacroEco() {
     return (
         <div className='Elementry-childs'>
             <div>
-                <div class="heading">
+                <div className="heading">
                     <h1>Intro to Macroeconomics</h1>
                 </div>
-                <div class="subh">
+                <div className="subh">
                     <h2>GDP : It's not just size, growth also matters</h2>
                 </div>
-                <div class="cont">
+                <div className="cont">
                     <p>Gross Domestic Product (GDP) is the most common measure to estimate the size of a country’s economy. It
                         represents the total value of final goods and services produced domestically, in a given time period.
                         India’s GDP was approximately USD 2.3 trillion for financial year 2015. What this means is that the
@@ -50,10 +50,10 @@ function IntroMacroEco() {
                         country.</p>
                 </div>
                 <br />
-                <div class="subh">
+                <div className="subh">
                     <h2>Inflation : Investing in FDs thinking you will earn 8% returns?</h2>
                 </div>
-                <div class="cont">
+                <div className="cont">
                     <p> From an individual investor’s perspective, inflation is one of the most important indicators to
                         understand
                         and track. Inflation indicates an overall increase in the general price level of goods and services in a
@@ -104,10 +104,10 @@ function IntroMacroEco() {
                     </p>
                 </div>
                 <br />
-                <div class="subh">
+                <div className="subh">
                     <h2>Stagflation : Inflation's nefarious cousin</h2>
                 </div>
-                <div class="cont">
+                <div className="cont">
                     <p>You just learnt about inflation and how it is important to invest in instruments that earn higher rate of
                         return compared to inflation. Now let’s explore a similar sounding concept called stagflation. </p>
                     <p> Stagflation is a situation where economy is stagnating, i.e. it is not experiencing any GDP growth and
@@ -134,11 +134,11 @@ function IntroMacroEco() {
                     </p>
                 </div>
                 <br/>
-                    <div class="subh">
+                    <div className="subh">
                         <h2>Unemployment : One of the most dreaded words in economics
                         </h2>
                     </div>
-                    <div class="cont">
+                    <div className="cont">
                         <p> Employment is the primary source of income for majority of the people. If less number of people are
                             employed, it results in less expenditure in the economy thereby leading to lower GDP growth. This will
                             be
@@ -191,10 +191,10 @@ function IntroMacroEco() {
                         <p> Now let’s see how these variables change with change in business cycles, as an economy progresses.</p>
                     </div>
                     <br/>
-                        <div class="subh">
+                        <div className="subh">
                             <h2>Business Cycles : Curves always matter</h2>
                         </div>
-                        <div class="cont">
+                        <div className="cont">
                             <p> Let’s consider an example. Suppose you own a small chocolate factory in India. Most of the major
                                 festivals –
                                 Diwali, Eid, Dussehra, Christmas etc. lie during the second half of the year. During this festive
@@ -238,7 +238,7 @@ function IntroMacroEco() {
                                         benefits from it for a longer period of time. These can be financial securities, real estate, and so on
                                         in
                                         the form of short- or long-term assets. But for the purpose of indexation, we shall focus on long-term
-                                        capital assets—held for 12 to 36 months depending on the asset class. </p>
+                                        capital assets—held for 12 to 36 months depending on the asset className. </p>
                                     <p>Capital gain: The profit you earn on selling a capital asset after you have held it for a minimum holding
                                         period is called a capital gain. So when you sell a residential property after holding it for at least 3
                                         yrs, the profit you make thereon is a long-term capital gain. Simply put, a capital gain is a difference
