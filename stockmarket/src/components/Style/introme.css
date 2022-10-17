@@ -5,8 +5,6 @@
 .heading{
     color:white;
     background-color: black;
-    padding-left: 2%;
-    margin-top: 0px;
     font: bold;
     font-size: larger;
     max-width: 100%;
@@ -30,8 +28,6 @@
 }
 .cont{
     color: aliceblue;
-  padding-left: 50px;
-  padding-right: 100px;
   font-size: larger;
   text-align: justify;
 }
@@ -48,5 +44,4 @@
     align-items: center;
 }
 @media only screen and (max-width: 600px){
-    
 }
