@@ -7,6 +7,7 @@ import Home from './components/Home';
 import EleEconomics from './components/EleEconomics';
 import EquityMarketsM from './components/EquityMarketsM';
 import InvestmentInPortfolios from './components/InvestmentInPortfolios';
+import FooterOfStocks from './components/FooterOfStocks';
 function App() {
   return (
     <div className='app'>
