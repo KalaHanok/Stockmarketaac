@@ -143,8 +143,11 @@
     border-radius: 0.7vh;
 }
 @media only screen and (max-width: 720px){
+    /* .Nav-container{
+        max-width: 98.8vw;
+    } */
     .Nav-input{
-        width: 70vw;
+        width: 50vw;
     }
     .Nav-child1{
         display: none;

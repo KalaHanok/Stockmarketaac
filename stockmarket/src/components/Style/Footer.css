@@ -1,0 +1,42 @@
+.Footerpart{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    
+}
+.Footerpart a{
+    text-decoration: none;
+    color: antiquewhite;
+    max-height: 40vh;
+}
+.Footer{
+    display: flex;
+    flex-flow: column;
+    padding: 1%;
+    max-width: 25vw;
+    font-size: larger;
+    left: 3vw;
+    position: relative;
+}
+.Products{
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    font-size: larger;
+}
+.About{
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    font-size: large;
+}
+
+.SocialMedia{
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    color: aliceblue;
+    right: 5vw;
+}
