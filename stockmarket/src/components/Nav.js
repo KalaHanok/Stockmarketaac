@@ -1,8 +1,6 @@
 import React,{useState} from 'react'
 import { AiFillCaretDown } from "react-icons/ai";
 import { ImSearch } from "react-icons/im";
-import { RiSendPlaneFill } from "react-icons/ri";
-import { IoIosNotifications } from "react-icons/io";
 import { FaBars} from "react-icons/fa";
 import {useNavigate} from 'react-router-dom'
 import { AiFillHome } from "react-icons/ai";
@@ -21,7 +19,14 @@ function Nav() {
         <div className='Nav-container' onClick={()=>{
             set_c_name("nav-search-none")
         }}>
-            <div className='Nav-bar'>
+            <div className='Nav-bar' onClick={()=>{set_i_c_names(
+                (prevState)=>{
+                    if(prevState==='icons-none'){
+                        return 'icons-display'
+                    }
+                    return 'icons-none'
+                }
+            )}}>
                 <FaBars/>
             </div>
             <div className='Nav-child1' onClick={()=>{set_i_c_names(

@@ -1,0 +1,32 @@
+.Elementry-childs{
+    background-color:black;
+    margin: 1%;
+    padding: 1%;
+}
+.heading{
+    color: white;
+    background-color: black;
+    margin-top: 0px;
+    font: bold;
+    font-size: larger;
+
+}
+.subh{
+    color: #FBD757;
+    font-size: larger;
+
+}
+.cont{
+    color: aliceblue;
+    font-size: larger;
+    text-align: justify;
+}
+.images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin-left: 5%;
+    padding-bottom: 1%;
+    padding-top: 1%
+}

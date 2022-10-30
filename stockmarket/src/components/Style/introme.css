@@ -1,31 +1,22 @@
-.images{
-    display: flex;
-    position: relative;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
-    z-index: 1.5;
-}
+/* *{
+    background-color: black;
+    
+} */
 .heading{
-    color:#580796;
+    color:white;
+    background-color: black;
     display: flex;
-    align-items: center;
     justify-content: center;
-    max-width: 100vw;
-    height: 10vh;
-    overflow-x: hidden;
     margin-top: 0px;
     font: bold;
     font-size: larger;
-    opacity: 1.5;
-    background-image: linear-gradient(to bottom right, rgb(43, 251, 247), rgb(55, 246, 112));
-    border-radius: 0.5vh;
+    max-width: 100%;
 }
-.intromacroeco{
-    /* background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover; */
-    width: 100vw;
+.Elementry-childs{
+    background-color:black;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
 }
 /* .bimg{
     display: flex;
@@ -39,36 +30,34 @@
     width: 100vw;
 } */
 .subh{
-    color: #f1c423;
-    padding-left: 3%;
+    color: #FBD757;
+    padding-left: 1.5%;
     font-size: larger;
     max-width: 80%;
-    opacity: 1.5;
+
+}
+.Intrest-p-s{
+    color: rgb(221, 84, 84) ;
 }
 .cont{
-    color: black;
-  font-size: 3vh;
+    color: aliceblue;
+  font-size: larger;
   text-align: justify;
   padding-left: 5vw;
   padding-right: 5vw;
   opacity: 1.5;
   z-index: 1;
 }
-/* .intromacroeco::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(0,0,0,0.25);
-} */
-
-
-@media only screen and (max-width: 1200px){
-    .images img{
-        width: 100%;
-        max-width: 1150px;
-        height: auto;
-    }
+.images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+.images-cf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 720px){
 }

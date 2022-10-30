@@ -39,6 +39,7 @@ export default function FooterOfStocks() {
             <span><a href='www.instagram.com'><BsInstagram/></a></span>
             <br></br>
             <span><a href='www.twitter.com'><BsTwitter/></a></span>
+
         </div>
     </div>
     </>

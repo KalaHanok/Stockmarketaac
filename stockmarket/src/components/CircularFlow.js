@@ -95,7 +95,7 @@ function CircularFlow() {
                             total GDP.</p>
 
                     </div>
-                    <div className="images"> <img src={cf4} alt=""/> </div>
+                    <div className="images-cf"> <img src={cf4} alt=""/> </div>
                     <div className="cont">
                         <p> Let’s discuss the expenditure approach. From the above diagram, we can see that there are 4 major spenders
                             in the economy. Households are spending on purchasing goods and services produced by firms, firms are
