@@ -1,0 +1,25 @@
+.home-ui-man-content{
+    display: flex;
+    justify-content: space-around;
+}
+.homeui-content{
+    display: flex;
+    font-family: "Abhaya Libre SemiBold";
+    font-size: 25px;
+    flex-flow: column;
+    color: #FBD757;
+    position: relative;
+    top: 13vh;
+} 
+#homeui-c-1{
+    font-weight: 900;
+    font-size: 7vw;
+}
+#homeui-c-2{
+    font-weight: 900;
+    font-size: 3.5vw;
+}
+.h-img-c{
+    position: relative;
+    top: 10vh;
+}

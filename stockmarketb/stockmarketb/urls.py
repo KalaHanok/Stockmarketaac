@@ -23,4 +23,5 @@ urlpatterns = [
     path('test/<int:rag>/',views.test,name='test'),
     path('search/',views.Search,name="search"),
     path('stockdetails/<str:id>/',views.Basic_details,name="basic_details"),
+    path('stockapiKey/',views.Apikey,name="apikey"),
 ]

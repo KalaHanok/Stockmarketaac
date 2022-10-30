@@ -1,13 +1,14 @@
 import React from 'react'
-import Marque from './Marque';
-import Anonomous from './Anonomous'
-import Toploserngainers from './Toploserngainers';
+import HomeUi from './HomeUi';
+import FooterOfStocks from './FooterOfStocks';
+import Smallinfo from './Smallinfo';
 function Home() {
   return (
-    <>
-        <Toploserngainers/>
-        <Anonomous/>
-    </>
+    < div>
+      <HomeUi/>
+      <Smallinfo/>
+      <FooterOfStocks/>
+    </div>
   )
 }
 

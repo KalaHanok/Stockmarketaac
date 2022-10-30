@@ -1,12 +1,16 @@
 import React from 'react'
-import './Style/equitymarket.css'
+// import './Style/equitymarket.css'
+import './Style/introme.css'
 function EquiMarket() {
     return (
         <div className='Elementry-childs'>
+            {/* <div className='bimg'>
+                <img src={bistock} alt=''></img>
+            </div> */}
             <div className="heading">
                 <h1>Equity Markets</h1>
             </div>
-            <div className="subh">
+            <div classsName="subh" style={{marginLeft:"3%", fontSize:"3vh"}}>
                 <h2>Exchanges :
                     Drivers of economic growth
                 </h2>

@@ -6,14 +6,14 @@ import './Style/introme.css'
 function CircularFlow() {
     return (
         <div className='Elementry-childs'>
-            <div class="heading">
+            <div className="heading">
                 <h1>Circular Flow</h1>
             </div>
-            <div class="subh">
+            <div className="subh">
                 <h2>Circular Flow of Products : How you control the entire production process
                 </h2>
             </div>
-            <div class="cont">
+            <div className="cont">
                 <p> Market is a very common term used by all of us on a daily basis. Any place enabling buyers and sellers of a
                     particular good/service to interact with each other is called market. If there is a place where buyers and
                     sellers of sugar are coming together and trading with each other, it will be called a sugar market.
@@ -41,15 +41,15 @@ function CircularFlow() {
                     goods using these factors of production and sell it back to households in finished goods market. Full
                     circular process can be seen in the figure below.</p>
             </div>
-            <div class="images"><img src={cf1} alt=""/></div>
+            <div className="images"><img src={cf1} alt=""/></div>
             <br/>
-                <div class="subh">
+                <div className="subh">
                     <h2>Circular Flow of Income :
                         Spend.. it's all coming back to you
 
                     </h2>
                 </div>
-                <div class="cont">
+                <div className="cont">
                     <p> In the previous article, “Circular flow of products” we saw how products flow in the economy. Firms buy
                         factors of production from households in the factor market and sell finished goods back to them in the
                         finished goods market.</p>
@@ -72,15 +72,15 @@ function CircularFlow() {
                         little difficult.</p>
 
                 </div>
-                <div class="images"> <img src={cf2} alt=""/> </div>
+                <div className="images"> <img src={cf2} alt=""/> </div>
                 <br/>
-                    <div class="subh">
+                    <div className="subh">
                         <h2>Measuring GDP :
                             The recipe
 
                         </h2>
                     </div>
-                    <div class="cont">
+                    <div className="cont">
                         <p> Understanding how to measure gross domestic produce (GDP) becomes very easy after learning circular flow of
                             income. We recommend reading our previous three articles on circular flow of products and money before
                             continuing on. As discussed in an earlier article, GDP is the value of final goods and services produced
@@ -95,8 +95,8 @@ function CircularFlow() {
                             total GDP.</p>
 
                     </div>
-                    <div class="images1"> <img src={cf4} alt=""/> </div>
-                    <div class="cont">
+                    <div className="images"> <img src={cf4} alt=""/> </div>
+                    <div className="cont">
                         <p> Let’s discuss the expenditure approach. From the above diagram, we can see that there are 4 major spenders
                             in the economy. Households are spending on purchasing goods and services produced by firms, firms are
                             spending on their factor requirements, Government is spending to create public goods and finally foreigners

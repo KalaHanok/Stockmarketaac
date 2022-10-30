@@ -1,5 +1,6 @@
 import React from 'react'
-import './Style/equitymarket.css'
+// import './Style/equitymarket.css'
+import './Style/introme.css'
 import ch1 from './images/ch1.png'
 import ch2 from './images/ch2.png'
 import ch3 from './images/ch3.png'

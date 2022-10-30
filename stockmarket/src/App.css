@@ -1,6 +1,6 @@
 .app{
   background-color: rgb(16, 16, 16);
+  width: 100vw;
   color: white;
-  height: 100vh;
-  padding-bottom: 10px;
+  overflow-x: hidden;
 }

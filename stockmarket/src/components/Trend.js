@@ -1,5 +1,6 @@
 import React from 'react'
-import './Style/equitymarket.css'
+// import './Style/equitymarket.css'
+import './Style/introme.css'
 import trend1 from './images/trend1.png'
 import trend2 from './images/trend2.png'
 function Trend() {

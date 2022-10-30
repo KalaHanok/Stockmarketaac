@@ -1,6 +1,7 @@
 import React from 'react'
 import bod from './images/bod.png'
-import './Style/iip.css'
+// import './Style/iip.css'
+import './Style/introme.css'
 function BenefitsOfP() {
     return (
         <div className='Elementry-childs'>
@@ -47,7 +48,7 @@ function BenefitsOfP() {
 
             </div>
             <br/>
-                <div className="image"> <img src={bod} alt=""/> </div>
+                <div className="images"> <img src={bod} alt=""/> </div>
         </div>
     )
 }

@@ -95,3 +95,10 @@ def Basic_details(request,id):
         stock_deatails=StockSymbol.objects.get(pk=id)
         print(stock_deatails.longName)
         return HttpResponse(json.dumps({"id":stock_deatails.id,"symbol":stock_deatails.symbol,"shortName":stock_deatails.shortName,"longName":stock_deatails.longName,"exchange":stock_deatails.exchange,"market":stock_deatails.market,"quoteType":stock_deatails.quoteType}))
+def Apikey(request):
+    if request.method=='GET':
+        api_key='D1POQPCSKKGG4TQ8'
+        pobj={'apiKey':api_key}
+        jobj=json.dumps(pobj)
+        print(jobj)
+        return HttpResponse(jobj)

@@ -1,8 +1,12 @@
 import React from 'react'
-import './Style/iip.css'
+// import './Style/iip.css'
+import './Style/introme.css'
 function WhtIsPortfolio() {
     return (
         <div className='Elementry-childs'>
+            {/* <div className='bimg'>
+                <img src={bistock}></img>
+            </div> */}
             <div className="heading">
                 <h1>Calculating a Portfolio's Return</h1>
             </div>

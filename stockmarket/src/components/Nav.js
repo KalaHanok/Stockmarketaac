@@ -5,6 +5,11 @@ import { RiSendPlaneFill } from "react-icons/ri";
 import { IoIosNotifications } from "react-icons/io";
 import { FaBars} from "react-icons/fa";
 import {useNavigate} from 'react-router-dom'
+import { AiFillHome } from "react-icons/ai";
+import { VscGraphLine } from "react-icons/vsc";
+import { BsGraphUp,BsGraphDown } from "react-icons/bs";
+import { IoMdContact } from "react-icons/io";
+import { FcAbout } from "react-icons/fc";
 import './Style/nav.css'
 import axios from 'axios';
 function Nav() {
@@ -84,30 +89,21 @@ function Nav() {
                     </div>
                 </div>
             <div className='Nav-child2'>
-                <div className='Nav-sendicon'>
-                    <RiSendPlaneFill />
+                <div className='Nav-sendicon' onClick={()=>{navigate('/aboutus')}} style={{color:"black"}}>
+                   <FcAbout/>
                 </div>
-                <div className='Nav-notifyicon'>
-                    <IoIosNotifications />
+                <div className='Nav-notifyicon'onClick={()=>{navigate('/contactus')}}>
+                    <IoMdContact/>
                 </div>
             </div>
             <div className={icons_c_name}>
-
-                <div className='nav-icons-c'>
-                    <div 
-                        onClick={
+                <div className='nav-icons-c-1'>
+                    <div  className='nav-icon-m' onClick={
                             ()=>{
                                 navigate('/')
                                 set_i_c_names('icons-none')
                             }
-                        }
-                    >
-                         <span className='nav-b-h'><AiFillCaretDown /></span>
-                         back to home
-                    </div>
-                </div>
-                <div className='nav-icons-c-1'>
-                    <div  className='nav-icon-m'> </div>
+                        }><AiFillHome/> </div>
                 </div>
                 <div className='nav-icons-c-2'>
                     <div  className='nav-icon-m'
@@ -115,23 +111,23 @@ function Nav() {
                             navigate('/ElementryEconomics')
                             set_i_c_names('icons-none')
                         }
-                    }></div>
+                    } ><BsGraphUp/></div>
                     <div  className='nav-icon-m'
                      onClick={()=>{
                             navigate('/Equitymarkets')
                             set_i_c_names('icons-none')
                         }
-                    }></div>
+                    }><BsGraphDown/></div>
                     <div  className='nav-icon-m'
                      onClick={()=>{
                             navigate('/InvestmentInPortfolios')
                             set_i_c_names('icons-none')
                         }
-                    }></div>
+                    }><VscGraphLine/></div>
                 </div>
                 <div className='nav-icons-c-3'>
-                    <div  className='nav-icon-m'></div>
-                    <div  className='nav-icon-m' id='nav-icons-c-3'></div>
+                    <div  className='nav-icon-m' onClick={()=>{navigate('/contactus')}}><IoMdContact/></div>
+                    <div  className='nav-icon-m' id='nav-icons-c-3' onClick={()=>{navigate('/aboutus')}}><FcAbout/></div>
                 </div>
             </div>
         </div>

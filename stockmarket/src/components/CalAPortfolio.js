@@ -1,5 +1,6 @@
 import React from 'react'
-import './Style/iip.css'
+// import './Style/iip.css'
+import './Style/introme.css'
 function CalAPortfolio() {
     return (
         <div className='Elementry-childs'>

@@ -7,7 +7,7 @@ import Trend from './Trend'
 import Volume from './Volume'
 function EquityMarketsM() {
   return (
-    <div style={{backgroundColor:'black',display:'flex',position:'absolute',flexFlow:'column'}}>
+    <div style={{backgroundColor:'white',display:'flex',position:'absolute',flexFlow:'column',overflowX:'hiddenS'}}>
         <EquiMarket/>
         <UnderstandingFinancialStatements/>
         <TechnicalAnalysis/>

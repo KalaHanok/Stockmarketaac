@@ -1,5 +1,6 @@
 import React from 'react'
-import './Style/equitymarket.css'
+// import './Style/equitymarket.css'
+import './Style/introme.css'
 function TechnicalAnalysis() {
     return (
         <div className='Elementry-childs'>
